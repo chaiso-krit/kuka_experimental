@@ -10,6 +10,7 @@ find_package(catkin REQUIRED COMPONENTS
   hardware_interface
   joint_limits_interface
   roscpp
+  tf
 )
 
 find_package(Boost REQUIRED COMPONENTS system)
@@ -55,6 +56,15 @@ add_executable(kuka_eki_hw_interface_node
 
 add_executable(kuka_kinect_node
   src/kuka_kinect_node.cpp
+)
+
+
+add_executable(tf_echo
+  src/tf_echo.cpp
+)
+
+target_link_libraries(tf_echo
+  kuka_eki_hw_interface
 )
 
 target_link_libraries(kuka_eki_hw_interface_node
