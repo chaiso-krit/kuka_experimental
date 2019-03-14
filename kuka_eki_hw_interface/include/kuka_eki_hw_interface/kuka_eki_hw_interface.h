@@ -99,6 +99,8 @@ public:
   void start();
   void read(const ros::Time &time, const ros::Duration &period);
   void write(const ros::Time &time, const ros::Duration &period);
+
+  void write_pos(std::vector<double> &position);
 };
 
 } // namespace kuka_eki_hw_interface

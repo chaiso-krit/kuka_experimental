@@ -52,7 +52,16 @@ add_executable(kuka_eki_hw_interface_node
   src/kuka_eki_hw_interface_node.cpp
 )
 
+
+add_executable(kuka_kinect_node
+  src/kuka_kinect_node.cpp
+)
+
 target_link_libraries(kuka_eki_hw_interface_node
+  kuka_eki_hw_interface
+)
+
+target_link_libraries(kuka_kinect_node
   kuka_eki_hw_interface
 )
 
@@ -64,4 +73,9 @@ install(
 
 install(
   TARGETS kuka_eki_hw_interface_node
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+
+
+install(
+  TARGETS kuka_kinect_node
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})

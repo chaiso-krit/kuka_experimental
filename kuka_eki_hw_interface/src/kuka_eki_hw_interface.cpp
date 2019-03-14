@@ -302,4 +302,16 @@ void KukaEkiHardwareInterface::write(const ros::Time &time, const ros::Duration 
   //  ROS_WARN_STREAM("eki_hw_iface RobotCommand buffer empty");
 }
 
+void KukaEkiHardwareInterface::write_pos(std::vector<double> &position)
+{
+  for(int i=0; i < 4; ++i)
+  {
+    position[i] = angles::from_degrees(position[i]);
+  }
+  // only write if max will not be exceeded
+  if (eki_cmd_buff_len_ < eki_max_cmd_buff_len_)
+    eki_write_command(position);
+
+}
+
 } // namespace kuka_eki_hw_interface
