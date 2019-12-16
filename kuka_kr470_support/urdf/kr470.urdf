@@ -1,0 +1,333 @@
+<robot
+  name="kr470">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0319340085234189 -0.000415511173178927 0.277538598727011"
+        rpy="0 0 0" />
+      <mass
+        value="316.910450949767" />
+      <inertia
+        ixx="21.290115574956"
+        ixy="-0.063173100691992"
+        ixz="0.367938465475192"
+        iyy="26.0791515269005"
+        iyz="0.00710422092789444"
+        izz="32.6093608761825" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_kr470_support/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_kr470_support/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link1">
+    <inertial>
+      <origin
+        xyz="0.0989685289536598 0.0205509133142213 0.295059580650042"
+        rpy="0 0 0" />
+      <mass
+        value="221.872843366134" />
+      <inertia
+        ixx="16.7236709744171"
+        ixy="-0.839802905049228"
+        ixz="-8.28771095330619"
+        iyy="39.4912842102743"
+        iyz="-0.608679882619932"
+        izz="35.3011576800447" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_kr470_support/meshes/l1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_kr470_support/meshes/l1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_a1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.536"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.2289"
+      upper="3.2289"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link2">
+    <inertial>
+      <origin
+        xyz="0.331209964166554 -0.194547500501818 0.00047740254793438"
+        rpy="0 0 0" />
+      <mass
+        value="110.065595671163" />
+      <inertia
+        ixx="3.62838063024324"
+        ixy="2.09819596782157"
+        ixz="0.0480567074794956"
+        iyy="25.0335752354268"
+        iyz="0.0208732595927654"
+        izz="24.4652612364053" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_kr470_support/meshes/l2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_kr470_support/meshes/l2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_a2"
+    type="revolute">
+    <origin
+      xyz="0.5 -0.1245 0.509"
+      rpy="0 0 0" />
+    <parent
+      link="Link1" />
+    <child
+      link="Link2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.2689"
+      upper="0.34907"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link3">
+    <inertial>
+      <origin
+        xyz="0.343175621517149 0.191558208162997 0.02221877014813"
+        rpy="0 0 0" />
+      <mass
+        value="101.73658054617" />
+      <inertia
+        ixx="1.65506397055554"
+        ixy="-0.195015660249143"
+        ixz="-0.203204712298103"
+        iyy="17.1537525452762"
+        iyz="-0.012854186078741"
+        izz="16.691245299945" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_kr470_support/meshes/l3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_kr470_support/meshes/l3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_a3"
+    type="revolute">
+    <origin
+      xyz="1.3 -0.1435 0"
+      rpy="0 0 0" />
+    <parent
+      link="Link2" />
+    <child
+      link="Link3" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="2.7053"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link4">
+    <inertial>
+      <origin
+        xyz="0.112643993613722 0.00999318568997252 0.205661482057896"
+        rpy="0 0 0" />
+      <mass
+        value="12.4308742401245" />
+      <inertia
+        ixx="0.270919332869792"
+        ixy="0.0113398596424018"
+        ixz="-0.0603404497565558"
+        iyy="0.270887896047421"
+        iyz="0.0172480374701912"
+        izz="0.130298898875462" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_kr470_support/meshes/l4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_kr470_support/meshes/l4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_a5"
+    type="revolute">
+    <origin
+      xyz="1.05 0.3015 0"
+      rpy="0 0 0" />
+    <parent
+      link="Link3" />
+    <child
+      link="Link4" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-6.29"
+      upper="6.29"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link5">
+    <inertial>
+      <origin
+        xyz="-3.04665371413382E-05 3.46944695195361E-18 -0.0473448754273096"
+        rpy="0 0 0" />
+      <mass
+        value="2.26885157442685" />
+      <inertia
+        ixx="0.0074476394325135"
+        ixy="6.7762635780344E-20"
+        ixz="2.89086241277938E-06"
+        iyy="0.00744210740248221"
+        iyz="-1.13440424893648E-19"
+        izz="0.0117725850896514" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_kr470_support/meshes/l5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://kuka_kr470_support/meshes/l5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_a6"
+    type="revolute">
+    <origin
+      xyz="0.258 -0.0335 0.3"
+      rpy="1.5708 -1.5708 1.5708" />
+    <parent
+      link="Link4" />
+    <child
+      link="Link5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-6.1087"
+      upper="6.1087"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

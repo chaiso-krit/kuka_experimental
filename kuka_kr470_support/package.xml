@@ -1,0 +1,22 @@
+<package>
+  <name>kuka_kr470_support</name>
+  <version>1.0.0</version>
+  <description>
+    <p>URDF Description package for kr470 URDF</p>
+    <p>This package contains configuration data, 3D models and launch files
+for kr470 URDF robot</p>
+  </description>
+  <author>Krit</author>
+  <maintainer email="chaiso.krit@gmail.com" />
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roslaunch</build_depend>
+  <run_depend>robot_state_publisher</run_depend>
+  <run_depend>rviz</run_depend>
+  <run_depend>joint_state_publisher</run_depend>
+
+  <export>
+    <architecture_independent />
+  </export>
+</package>

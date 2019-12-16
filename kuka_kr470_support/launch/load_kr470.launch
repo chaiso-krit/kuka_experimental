@@ -1,0 +1,3 @@
+<launch>
+  <param name="robot_description" textfile="$(find kuka_kr470_support)/urdf/kr470.urdf" />
+</launch>
